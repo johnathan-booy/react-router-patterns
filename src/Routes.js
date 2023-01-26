@@ -1,10 +1,11 @@
 import { Redirect, Route, Switch } from "react-router-dom";
+import DogList from "./DogList";
 
 function Routes({ dogs }) {
 	return (
 		<Switch>
 			<Route exact path="/dogs">
-				<h1>List of dogs</h1>
+				<DogList dogs={dogs} />
 			</Route>
 			<Route exact path="/dogs/:name">
 				<h1>One dog</h1>
