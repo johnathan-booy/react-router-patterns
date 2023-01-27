@@ -1,15 +1,22 @@
 import React from "react";
-import DogDetails from "./DogDetails";
+import { Link } from "react-router-dom";
 import { v4 as uuid } from "uuid";
+import "./DogList.css";
 
 const DogList = ({ dogs }) => {
 	return (
-		<div className="DogList">
-			<h1>All Dogs</h1>
-			{dogs.map((dog) => (
-				<DogDetails dog={dog} key={uuid()} />
-			))}
-		</div>
+		<>
+			<h1>We have dogs!</h1>
+			<p>and they are paw-some!</p>
+			<div className="DogList">
+				{dogs.map((dog) => (
+					<Link to={`/dogs/${dog.name}`} className="DogList-dog" key={uuid()}>
+						<h3 className="DogList-dog-name">{dog.name}</h3>
+						<img src={dog.src} />
+					</Link>
+				))}
+			</div>
+		</>
 	);
 };
 

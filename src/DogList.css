@@ -1,0 +1,39 @@
+.DogList {
+	display: flex;
+	flex-wrap: wrap;
+	max-width: 1200px; /* Set the maximum width of the DogList container to 1200px */
+	margin: auto; /* Add a margin of 20px around the DogList container */
+}
+
+/* Media Query */
+@media only screen and (max-width: 600px) {
+	.DogList {
+		flex-direction: column; /* Change the flex direction to column for mobile */
+		margin: 10px; /* Decrease the margin to 10px when the screen width is below 600px */
+	}
+	.DogList-dog {
+		flex-basis: 100%; /* Each dog link should take up 100% of the width of the parent container */
+	}
+}
+
+.DogList-dog {
+	margin: auto;
+	flex-basis: 22%; /* Each dog link will take up 25% of the width of the parent container */
+	text-align: center; /* Center the text inside the dog link */
+	text-decoration: none; /* Remove the underline on the link */
+	color: black; /* Change the link text color */
+}
+
+.DogList-name {
+	margin-bottom: 1rem;
+	font-weight: 600; /* Make the name bold */
+}
+
+.DogDetails-age {
+	margin-bottom: 2rem;
+	font-weight: 400; /* Keep the age in normal weight */
+}
+
+.DogList-dog img {
+	width: 100%; /* Make the image take up the full width of the dog link */
+}

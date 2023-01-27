@@ -1,0 +1,42 @@
+/* Mobile-first design */
+.DogDetails {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	max-width: 1200px; /* Set the maximum width of the DogList container to 1200px */
+	margin: auto; /* Add a margin of 20px around the DogList container */
+}
+
+/* Media Query for larger screens */
+@media only screen and (max-width: 600px) {
+	.DogDetails {
+		font-size: 2rem; /* Increase font size for larger screens */
+		margin: 10px; /* Decrease the margin to 10px when the screen width is below 600px */
+	}
+}
+
+.DogDetails-name {
+	margin-bottom: 1rem;
+	font-weight: 600; /* Make the name bold */
+}
+
+.DogDetails-age {
+	margin-bottom: 2rem;
+	font-weight: 400; /* Keep the age in normal weight */
+}
+
+.DogDetails-facts {
+	list-style: none; /* remove bullet points */
+	padding: 0; /* remove default padding */
+	margin-bottom: 2rem;
+}
+
+.DogDetails-facts li {
+	font-size: 1.25rem;
+	margin-bottom: 1rem;
+}
+
+.DogDetails img {
+	max-width: 600px;
+}
